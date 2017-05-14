@@ -1,0 +1,84 @@
+<html>
+
+<link rel="stylesheet" href="common.css">
+
+<body>
+    <!--<div id="authorizeUser"  style="display: none;">-->
+        <h2>Welcome back, <p id="username"></p></h2>
+
+        <button type="button" style="font-size:large" onclick="newGame()" >New Game</button>
+        <br>
+        <button type="button" class="logoutButton" style="font-size:large" onclick="logout()" >Logout</button>
+    <!--</div>-->
+</body>
+</html>
+
+<script src="lib/js-cookie.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+    if (Cookies.get('user') === undefined) {
+        window.location = "/login.html";
+    } else {
+        $('#authorizeUser').show();
+        $('#username').text(Cookies.get('user'));
+    }
+</script>
+
+<script>
+    function newGame() {
+        var settings = {
+            "method": "GET",
+            "crossDomain": true,
+            "url": window.location.origin.slice(0, window.location.origin.length - 2) + "90/mm/join",
+            'data': {
+                'user': Cookies.get('user'),
+                'token': Cookies.get('token')
+            },
+            'Access-Control-Allow-Origin': '*'
+//            'success' : function(data) {
+//                window.location = data.toString()
+//            }
+        };
+        $.ajax(settings).done(function(response) {
+            //setTimeout(window.location.href = response.toString(), 1000);
+            //window.location.reload(true);
+            window.location.href = response.toString()
+        }).fail(function (jqXHR, textStatus) {
+            window.location.href = '/';
+            alert(jqXHR.status + " " + jqXHR.statusText + ". " + jqXHR.responseText);
+            console.log(jqXHR.status + " " + jqXHR.statusText + ". " + jqXHR.responseText);
+        });
+
+    }
+</script>
+
+
+<script>
+    function logout() {
+        if (Cookies.get('user') === undefined
+            || Cookies.get('token') === undefined) {
+
+            window.location = "/login.html";
+        }
+
+        var settings = {
+            "method": "POST",
+            "crossDomain": true,
+            "url": "/auth/logout",
+            headers: {
+                'Authorization': 'Bearer ' + Cookies.get('token')
+            }
+        };
+
+        $.ajax(settings).done(function(response) {
+            Cookies.remove('user');
+            Cookies.remove('token');
+            window.location = "/";
+        }).fail(function (jqXHR, textStatus) {
+            alert(jqXHR.status + " " + jqXHR.statusText + ". " + jqXHR.responseText);
+            console.log(jqXHR.status + " " + jqXHR.statusText + ". " + jqXHR.responseText);
+            window.location = "/";
+        });
+    }
+</script>
