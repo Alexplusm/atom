@@ -11,9 +11,7 @@ import ru.atom.bombergirl.dao.Database;
 import ru.atom.bombergirl.gameserver.EventServlet;
 import ru.atom.bombergirl.server.CrossBrowserFilter;
 
-/**
- * Created by ikozin on 17.04.17.
- */
+
 
 public class MatchMakerServer {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package ru.atom.bombergirl.gamemodel.geometry;
+package ru.atom.bombergirl.game.geometry;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 

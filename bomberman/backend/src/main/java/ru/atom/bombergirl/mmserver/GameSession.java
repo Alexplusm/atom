@@ -21,9 +21,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * Created by ikozin on 17.04.17.
- */
+
 public class GameSession implements Tickable, Runnable {
     private static final Logger log = LogManager.getLogger(MatchMaker.class);
     private static AtomicLong idGenerator = new AtomicLong();

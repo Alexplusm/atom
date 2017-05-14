@@ -1,4 +1,4 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -6,9 +6,7 @@ import ru.atom.bombergirl.mmserver.GameSession;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
-/**
- * Created by dmitriy on 01.05.17.
- */
+
 
 public class Ticker {
     private static final Logger log = LogManager.getLogger(Ticker.class);

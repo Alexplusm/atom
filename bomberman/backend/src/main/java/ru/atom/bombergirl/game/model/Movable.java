@@ -1,6 +1,6 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
-import ru.atom.bombergirl.gamemodel.geometry.Point;
+import ru.atom.bombergirl.game.geometry.Point;
 
 /**
  * GameObject that can move during game

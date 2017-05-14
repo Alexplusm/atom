@@ -4,9 +4,7 @@ import org.eclipse.jetty.websocket.api.Session;
 import ru.atom.bombergirl.gamemodel.model.Action;
 import ru.atom.bombergirl.gamemodel.model.Pawn;
 
-/**
- * Created by ikozin on 17.04.17.
- */
+
 public class Connection {
     //private final String name;
     private final Session session;

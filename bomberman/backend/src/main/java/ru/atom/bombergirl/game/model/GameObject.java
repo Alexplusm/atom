@@ -1,4 +1,4 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
 /**
  * Any entity of game mechanics

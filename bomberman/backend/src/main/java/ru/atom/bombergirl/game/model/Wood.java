@@ -1,11 +1,8 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
-import ru.atom.bombergirl.gamemodel.geometry.Point;
+import ru.atom.bombergirl.game.geometry.Point;
 import ru.atom.bombergirl.mmserver.GameSession;
 
-/**
- * Created by dmitriy on 05.03.17.
- */
 public class Wood implements Block, GameObject, Positionable {
 
     private Point position;

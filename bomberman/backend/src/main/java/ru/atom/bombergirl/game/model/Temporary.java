@@ -1,4 +1,4 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
 /**
  * GameObjects, that lives for some time and the die

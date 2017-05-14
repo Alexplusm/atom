@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * Created by ikozin on 17.04.17.
- */
+
 public class MatchMaker implements Runnable {
     private static final Logger log = LogManager.getLogger(MatchMakerServer.class);
     private static AtomicLong idGame = new AtomicLong();

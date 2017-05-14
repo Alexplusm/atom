@@ -1,8 +1,6 @@
 package ru.atom.bombergirl.gameserver;
 
-/**
- * Created by dmitriy on 01.05.17.
- */
+
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;

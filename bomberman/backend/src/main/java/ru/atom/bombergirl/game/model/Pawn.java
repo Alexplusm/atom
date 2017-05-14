@@ -1,14 +1,12 @@
-package ru.atom.bombergirl.gamemodel.model;
+package ru.atom.bombergirl.game.model;
 
-import ru.atom.bombergirl.gamemodel.geometry.Point;
+import ru.atom.bombergirl.game.geometry.Point;
 import ru.atom.bombergirl.mmserver.GameSession;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by dmitriy on 05.03.17.
- */
+
 public class Pawn implements GameObject, Positionable, Movable, Tickable {
 
     private Point position;

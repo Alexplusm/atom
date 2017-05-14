@@ -1,4 +1,4 @@
-package ru.atom.bombergirl.gamemodel.geometry;
+package ru.atom.bombergirl.game.geometry;
 
 /**
  * Entity that can physically intersect, like flame and player
